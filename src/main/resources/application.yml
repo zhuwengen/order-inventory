@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: order-inventory
+  datasource:
+    url: "jdbc:mysql://localhost:3306/order_inventory?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai"
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    flyway:
+      enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+    endpoint:
+      health:
+        show-details: always
